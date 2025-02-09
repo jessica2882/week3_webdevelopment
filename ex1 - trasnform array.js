@@ -13,8 +13,8 @@
 function transformToObjects(listOfNumbers) {
   result = [];
   // Write your code here
-  for (let i = 0; i< listOfNumbers.length;i++){
-    result.push({val:listOfNumbers[i]});
+  for (let i = 0; i < listOfNumbers.length; i++) {
+    result.push({ val: listOfNumbers[i] });
   }
   return result;
 }
@@ -25,4 +25,4 @@ function transformToObjects(listOfNumbers) {
 
 // test 1  -
 console.log(JSON.stringify(transformToObjects([1, 2, 3]))); // Should  be     [{val: 1}, {val: 2}, {val: 3}]
-console.log(JSON.stringify(transformToObjects([44])))
+console.log(JSON.stringify(transformToObjects([44])));

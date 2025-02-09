@@ -42,9 +42,9 @@ function getCartTotalAmount() {
 function addProductToCart(productId) {
   let cartItem = SHOPPING_CART.find((item) => item.id === productId);
   if (cartItem) {
-    cartItem.quantity += 1; // CASE 1: Increment quantity if product already exists
+    cartItem.quantity += 1;
   } else {
-    SHOPPING_CART.push({ id: productId, quantity: 1 }); // CASE 2: Add new product with quantity 1
+    SHOPPING_CART.push({ id: productId, quantity: 1 });
   }
 }
 
@@ -66,9 +66,9 @@ function removeProductFromCart(productId) {
   let cartIndex = SHOPPING_CART.findIndex((item) => item.id === productId);
   if (cartIndex !== -1) {
     if (SHOPPING_CART[cartIndex].quantity > 1) {
-      SHOPPING_CART[cartIndex].quantity -= 1; // CASE 1: Decrement quantity if >= 2
+      SHOPPING_CART[cartIndex].quantity -= 1;
     } else {
-      SHOPPING_CART.splice(cartIndex, 1); // CASE 2: Remove item if quantity is 1
+      SHOPPING_CART.splice(cartIndex, 1);
     }
   }
 }
